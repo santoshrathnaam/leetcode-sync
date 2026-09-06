@@ -1,9 +1,20 @@
 class Solution {
 
-    public int[] twoSum(int[] nums, int target) {
+    public ListNode reverseList(ListNode head) {
 
-        // Test solution
+        ListNode prev = null;
 
-        return new int[]{0, 1};
+        while (head != null) {
+
+            ListNode next = head.next;
+
+            head.next = prev;
+
+            prev = head;
+
+            head = next;
+        }
+
+        return prev;
     }
 }
